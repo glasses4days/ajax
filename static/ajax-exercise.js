@@ -4,12 +4,13 @@
 // PART 1: SHOW A FORTUNE
 
 function showFortune(evt) {
-
+    evt.preventDefault();
     // TODO: get the fortune and show it in the #fortune-text div
+    $.get('/fortune', function(results){$('#fortune-text').html(results);});
 }
 
 $('#get-fortune-button').on('click', showFortune);
-
+    
 
 
 
